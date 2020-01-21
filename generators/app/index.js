@@ -31,6 +31,10 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copy(this.templatePath("**"), this.destinationPath("./"));
+    this.fs.copy(
+      this.templatePath(".babelrc"),
+      this.destinationPath("./.babelrc")
+    );
   }
 
   install() {
